@@ -1,0 +1,23 @@
+<div *ngIf="user">
+  <h2>{{user.fname+"'s"}} details:</h2>
+  <div>
+    <label>Id: </label> {{user.id}}
+  </div>
+  <div>
+    <label>First Name: </label> {{user.fname}}
+  </div>
+  <div>
+    <label>Last Name: </label> {{user.lname}}
+  </div>
+  <div>
+    <label>Email : </label> {{user.email}}
+  </div>
+  <div>
+    <button class="btn btn-danger" (click)="delete()">Delete</button> &nbsp;
+    <button class="btn btn-warning" (click)="update(user)">Update</button>
+  </div>
+  
+  
+  
+  
+</div>

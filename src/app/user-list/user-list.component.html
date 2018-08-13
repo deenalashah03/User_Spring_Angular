@@ -1,0 +1,13 @@
+<div class="col-md-4 text-center">
+ <br><br> <button class="btn btn-primary" (click)="createUser()" >New User</button>
+</div>
+<div>
+  <h2>List of User's</h2>
+</div>
+<ul>
+  <li *ngFor="let user of users, let i = index" [class.selected]="user === selectedUser" (click)="onSelect(user)">
+    <h4>{{i+1}} - {{user.fname}} - {{user.lname}}</h4>
+
+  </li>
+</ul>
+<user-detail [user]="selectedUser"></user-detail>
